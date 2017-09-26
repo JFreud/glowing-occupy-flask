@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Occupations </title>
+  </head>
+  <body>
+    <h1> Occupations </h1>
+    <h3> Table of Occupations </h3>
+    <table border = "1">
+      <tr>
+	<th> Occupations </th>
+	<th> Percent </th>
+      </tr>
+      {% for i in listOcc %}
+      <tr>
+	<th> {{ i }} </th>
+	<th> {{ listPerc[loop.index0] }} </th>
+      </tr>
+    {% endfor %}
+    </table>
+    <br>
+    <h3> Random Occupation </h3>
+    <br>
+    {{ randOcc }}
+  </body>
+</html>
