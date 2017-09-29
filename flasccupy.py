@@ -1,9 +1,9 @@
-import occupation
+from utils import occupation
 from flask import Flask,render_template
 
 my_app = Flask(__name__)
 
-occDict = occupation.make_dict("occupations.csv")
+occDict = occupation.make_dict("data/occupations.csv")
 listOcc = list(occDict.keys())
 listPerc = list(occDict.values())
 

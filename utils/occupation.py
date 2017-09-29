@@ -22,22 +22,23 @@ def pick_random(occD, total):
     return "That's not right"
 
 
-#print(make_dict("occupations.csv"))
-occs = make_dict("occupations.csv")
-print pick_random(occs, 99.8)
+if __name__ == "__main__":
+    #print(make_dict("occupations.csv"))
+    occs = make_dict("occupations.csv")
+    print pick_random(occs, 99.8)
 
-testerD = {}
-top = 100000.0
+    testerD = {}
+    top = 100000.0
 
-for i in range (1, int(top)):
-    this = pick_random(occs, 99.8)
+    for i in range (1, int(top)):
+        this = pick_random(occs, 99.8)
    # print this
-    try:
-        testerD[this] += 1
-    except:
-        testerD[this] = 1
-    #print testerD
-for key in testerD:
-    testerD[key] = testerD[key] / top * 100
-print testerD
+        try:
+            testerD[this] += 1
+        except: 
+            testerD[this] = 1
+       #print testerD
+    for key in testerD:
+        testerD[key] = testerD[key] / top * 100
+    print testerD
     
